@@ -35,6 +35,11 @@ that don't consume USD/OpenPBR.
 - Textures are transcoded from ACEScg `.exr` to PNG.
 - The `DomeLight` is dropped (no glTF equivalent); lighting comes entirely from the emissive geometry.
 
+> **Note (comparing against Blender):** the textures are correctly converted ACEScg → sRGB on
+> export. When comparing a rendered Blender viewport against another renderer, remember Blender's
+> viewport shows **AgX-tonemapped** output while the raw textures are not — don't mistake that
+> difference for a conversion error.
+
 ## Source
 
 `StandardShaderBall/Shaderball.blend` is the authoring file; the USD and glTF versions are exported from it.
